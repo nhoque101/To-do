@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 function ToDoList(){
 
-    const [tasks, setTasks]= useState(["TAKE SHIT", "TAKE MORE SHIT"]); 
+    const [tasks, setTasks]= useState([]); 
     const [newTask, setNewTask]= useState("");
 
     function handleInputChange(event){
@@ -100,14 +100,13 @@ function ToDoList(){
 
                         <button 
                             className="move-button" 
-                            onClick={() => moveTaskUp(index) }>
-                            Up
+                            onClick={() => moveTaskDown(index)}>
+                            ⬇️
                         </button>
-
                         <button 
                             className="move-button" 
-                            onClick={() => moveTaskDown(index)}>
-                            Down
+                            onClick={() => moveTaskUp(index) }>
+                            ⬆️
                         </button>
                         
                      </li> 
